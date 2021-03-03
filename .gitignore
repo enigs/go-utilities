@@ -1,0 +1,7 @@
+.git
+.idea
+*.env
+*.sql
+air.conf
+tmp
+*.exe
