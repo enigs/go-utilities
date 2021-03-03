@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"digita_api/application/Library/StringUtils"
+	"github.com/enigs/go-utilities/StringUtils"
 )
 
 // Checks if date is valid

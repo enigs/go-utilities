@@ -5,8 +5,7 @@ import (
 	"time"
 
 	"github.com/bearbin/go-age"
-
-	"workbase_api/application/Library/StringUtils"
+	"github.com/enigs/go-utilities/StringUtils"
 )
 
 // Checks birth date if valid using Asia/Manila timezone
