@@ -58,3 +58,8 @@ func (agent *Agent) GetHeaders(r *http.Request) error {
 
 	return nil
 }
+
+// Checks if has authorization
+func (agent *Agent) HasAuthorization() bool {
+	return !StringUtils.IsEmpty(agent.Authorization)
+}
