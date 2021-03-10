@@ -17,18 +17,9 @@ type StackTrace struct {
 	UpdatedAt 			null.Time
 }
 
-// Creates a constructor for StackTrace
-func NewStackTrace() *StackTrace {
-	// Set StackTrace struct
-	var stacktrace StackTrace
-
-	// Return StackTrace
-	return &stacktrace
-}
-
-// Check if settings has table
-func (stacktrace *StackTrace) HasTable(store *gorm.DB) bool {
-	return store.Migrator().HasTable(stacktrace)
+// Set plural of actor into countries
+func (StackTrace) TableName() string {
+	return "stack_traces"
 }
 
 // Create table
@@ -56,4 +47,29 @@ func (stacktrace *StackTrace) CreateTable(store *gorm.DB) error {
 
 	return nil
 }
+
+// Creates a constructor for StackTrace
+func NewStackTrace() StackTrace {
+	// Set StackTrace struct
+	var stacktrace StackTrace
+
+	// Return StackTrace
+	return stacktrace
+}
+
+// Creates a constructor for StackTrace pointer
+func NewStackTracePointer() *StackTrace {
+	// Set StackTrace struct
+	var stacktrace StackTrace
+
+	// Return StackTrace
+	return &stacktrace
+}
+
+// Check if settings has table
+func (stacktrace *StackTrace) HasTable(store *gorm.DB) bool {
+	return store.Migrator().HasTable(stacktrace)
+}
+
+
 
