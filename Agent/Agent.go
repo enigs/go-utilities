@@ -20,8 +20,8 @@ type Agent struct {
 	OsVersion               string
 }
 
-// Creates a constructor for agent
-func NewAgent() *Agent {
+// Creates a constructor for agent pointer
+func NewAgentPointer() *Agent {
 	// Set agent struct
 	var a Agent
 
